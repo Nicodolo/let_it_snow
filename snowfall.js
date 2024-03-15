@@ -5,7 +5,7 @@ class Snowfall
 	constructor(in_bild , in_anz_bilder = 50 , in_speed = 1)
 	{
       this.bild                   = in_bild;
-			this.snow_fall_speed 	      = 1;	
+	  this.snow_fall_speed 	      = 1;	
       this.max_img                = 250;
       this.max_speed              = 5;
 
@@ -21,14 +21,13 @@ class Snowfall
         in_anz_bilder    = this.max_img;
       }
 
-			this.snow_img_count 	      = in_anz_bilder;
-			this.all_img 			          = Array();
+			this.snow_img_count 	    = in_anz_bilder;
+			this.all_img 			    = Array();
 			this.curr_y_pos_in_deg      = 0;
 			this.sin_left_add           = 0;
-      
-      this.init();
+      		this.init();
   }
-  init()
+  			init()
   {
 
 			for (let x=1 ; x  < this.snow_img_count ; x++)
@@ -36,10 +35,10 @@ class Snowfall
 			{
 				var tmp_elm 		    = document.createElement("IMG");    // << <img/>
 				tmp_elm.src 		    = "snow.png";						// img src ="snow.png"
-				tmp_elm.style.top 	= "0px";							//img src= "snow.png" style = "top:0px"
-				tmp_elm.style.left	= "0px";
-				tmp_elm.pos_top		  = 0.0;
-				tmp_elm.pos_left  	= 0.0;
+				tmp_elm.style.top 	    = "0px";							//img src= "snow.png" style = "top:0px"
+				tmp_elm.style.left	    = "0px";
+				tmp_elm.pos_top		    = 0.0;
+				tmp_elm.pos_left  	    = 0.0;
 
 				//tmp_elm.id			= "snow"+ (x + 1 );
 
@@ -136,10 +135,10 @@ class Snowfall
 			{
 
 			img___tag.pos_top		     = Math.random() * (-1 * window.innerHeight) - 100;
-			img___tag.pos_left		   = Math.random() * window.innerWidth;
-			img___tag.style_top 	   = img___tag.pos_top + "px";
-			img___tag.style_left 	   = img___tag.pos_left +"px";
-			img___tag.width          = Math.random() * 30 + 15;
+			img___tag.pos_left		     = Math.random() * window.innerWidth;
+			img___tag.style_top 	     = img___tag.pos_top + "px";
+			img___tag.style_left 	     = img___tag.pos_left +"px";
+			img___tag.width              = Math.random() * 30 + 15;
 			//img_tag.style.width = Math.random() *30 + 15 + "px";
 			}
 
